@@ -1,12 +1,19 @@
 {
     "name": "quill-yang-image-paste",
     "version": "1.0.0",
-    "description": "Quill插件，可粘贴剪贴板中图片文件z到Quill编辑器中。",
+    "description": "Quill插件，可粘贴剪贴板中图片文件粘贴到Quill编辑器中。",
     "main": "dist/bundle.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Yangholmes/quill-yang-image-paste.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Yangholmes/quill-yang-image-paste/issues"
+     },
     "keywords": [
         "quill",
         "image",
