@@ -1,6 +1,6 @@
 {
     "name": "quill-yang-image-paste",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Quill插件，可粘贴剪贴板中图片文件粘贴到Quill编辑器中。",
     "main": "src/imagePaste.js",
     "scripts": {
