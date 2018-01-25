@@ -5,6 +5,11 @@
  */
 const webpack = require('webpack');
 const path = require('path');
+const MinifyPlugin = require("babel-minify-webpack-plugin");
+
+function resolve(dir) {
+    return path.join(__dirname, '..', dir);
+}
 
 const config = {
     entry: './src/imagePaste.js',
@@ -12,18 +17,8 @@ const config = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    module: {
-        rules: [{
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader'
-            }
-        }]
-    },
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin()
-    ]
+    module: {},
+    plugins: []
 };
 
 module.exports = config;

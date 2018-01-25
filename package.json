@@ -2,7 +2,7 @@
     "name": "quill-yang-image-paste",
     "version": "1.0.0",
     "description": "Quill插件，可粘贴剪贴板中图片文件粘贴到Quill编辑器中。",
-    "main": "dist/bundle.js",
+    "main": "src/imagePaste.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "webpack"
@@ -13,18 +13,22 @@
     },
     "bugs": {
         "url": "https://github.com/Yangholmes/quill-yang-image-paste/issues"
-     },
+    },
     "keywords": [
         "quill",
         "image",
         "paste"
     ],
     "author": "Yangholmes",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
-        "babel-preset-env": "^1.6.1",
         "webpack": "^3.10.0"
+    },
+    "devDependencies": {
+        "babel-minify": "^0.2.0",
+        "babel-minify-webpack-plugin": "^0.2.0",
+        "babel-preset-env": "^1.6.1"
     }
 }

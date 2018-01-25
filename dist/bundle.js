@@ -1,1 +1,141 @@
-!function(t){function e(r){if(n[r])return n[r].exports;var i=n[r]={i:r,l:!1,exports:{}};return t[r].call(i.exports,i,i.exports,e),i.l=!0,i.exports}var n={};e.m=t,e.c=n,e.d=function(t,n,r){e.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:r})},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="",e(e.s=6)}([function(t,e,n){t.exports=!n(5)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,e){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,e){var n=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=n)},function(t,e){var n=t.exports={version:"2.5.3"};"number"==typeof __e&&(__e=n)},function(t,e,n){var r=n(16),i=n(17),o=n(19),u=Object.defineProperty;e.f=n(0)?Object.defineProperty:function(t,e,n){if(r(t),e=o(e,!0),r(n),i)try{return u(t,e,n)}catch(t){}if("get"in n||"set"in n)throw TypeError("Accessors not supported!");return"value"in n&&(t[e]=n.value),t}},function(t,e){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var r=n(7),i=n.n(r),o=n(8),u=n.n(o),c=function(){function t(e){arguments.length>1&&void 0!==arguments[1]&&arguments[1];i()(this,t),this.quill=e,this.eventRegister()}return u()(t,[{key:"eventRegister",value:function(){this.handlePaste=this.handlePaste.bind(this),this.quill.root.addEventListener("paste",this.handlePaste)}},{key:"handlePaste",value:function(t){this.insert=this.insert.bind(this);var e=t.clipboardData||t.originalEvent.clipboardData;if(e&&e.items){var n=e.items;this.readFiles(n,this.insert)}}},{key:"readFiles",value:function(t,e){[].forEach.call(t,function(t){if("file"===t.kind&&t.type.match(/^image\/(gif|jpe?g|a?png|svg|webp|bmp|vnd\.microsoft\.icon)/i)){var n=t.getAsFile(),r=new FileReader;r.onload=function(t){e&&e(t.target.result)},r.readAsDataURL(n)}})}},{key:"insert",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",e=this.quill.getSelection(),n=(this.quill.getSelection()||{}).index||this.quill.getLength();e||setTimeout(function(){this.quill.insertEmbed(n,"image",t,"user")}.bind(this),0)}}]),t}();e.default=c},function(t,e,n){"use strict";e.__esModule=!0,e.default=function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}},function(t,e,n){"use strict";e.__esModule=!0;var r=n(9),i=function(t){return t&&t.__esModule?t:{default:t}}(r);e.default=function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),(0,i.default)(t,r.key,r)}}return function(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),e}}()},function(t,e,n){t.exports={default:n(10),__esModule:!0}},function(t,e,n){n(11);var r=n(3).Object;t.exports=function(t,e,n){return r.defineProperty(t,e,n)}},function(t,e,n){var r=n(12);r(r.S+r.F*!n(0),"Object",{defineProperty:n(4).f})},function(t,e,n){var r=n(2),i=n(3),o=n(13),u=n(15),c=function(t,e,n){var f,a,s,l=t&c.F,p=t&c.G,d=t&c.S,v=t&c.P,h=t&c.B,y=t&c.W,b=p?i:i[e]||(i[e]={}),g=b.prototype,w=p?r:d?r[e]:(r[e]||{}).prototype;p&&(n=e);for(f in n)(a=!l&&w&&void 0!==w[f])&&f in b||(s=a?w[f]:n[f],b[f]=p&&"function"!=typeof w[f]?n[f]:h&&a?o(s,r):y&&w[f]==s?function(t){var e=function(e,n,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(e);case 2:return new t(e,n)}return new t(e,n,r)}return t.apply(this,arguments)};return e.prototype=t.prototype,e}(s):v&&"function"==typeof s?o(Function.call,s):s,v&&((b.virtual||(b.virtual={}))[f]=s,t&c.R&&g&&!g[f]&&u(g,f,s)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,e,n){var r=n(14);t.exports=function(t,e,n){if(r(t),void 0===e)return t;switch(n){case 1:return function(n){return t.call(e,n)};case 2:return function(n,r){return t.call(e,n,r)};case 3:return function(n,r,i){return t.call(e,n,r,i)}}return function(){return t.apply(e,arguments)}}},function(t,e){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,e,n){var r=n(4),i=n(20);t.exports=n(0)?function(t,e,n){return r.f(t,e,i(1,n))}:function(t,e,n){return t[e]=n,t}},function(t,e,n){var r=n(1);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,e,n){t.exports=!n(0)&&!n(5)(function(){return 7!=Object.defineProperty(n(18)("div"),"a",{get:function(){return 7}}).a})},function(t,e,n){var r=n(1),i=n(2).document,o=r(i)&&r(i.createElement);t.exports=function(t){return o?i.createElement(t):{}}},function(t,e,n){var r=n(1);t.exports=function(t,e){if(!r(t))return t;var n,i;if(e&&"function"==typeof(n=t.toString)&&!r(i=n.call(t)))return i;if("function"==typeof(n=t.valueOf)&&!r(i=n.call(t)))return i;if(!e&&"function"==typeof(n=t.toString)&&!r(i=n.call(t)))return i;throw TypeError("Can't convert object to primitive value")}},function(t,e){t.exports=function(t,e){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:e}}}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/**
+ * Quill editor 插件, 用于剪贴板图片粘贴
+ *
+ * @file
+ * @author Yangholmes 2018-01-24
+ */
+class ImagePaste {
+    constructor(quill, options = {}) {
+        this.quill = quill;
+        this.eventRegister();
+    }
+
+    // 事件注册
+    eventRegister() {
+        this.handlePaste = this.handlePaste.bind(this);
+        this.quill.root.addEventListener('paste', this.handlePaste);
+    }
+
+    // paste事件处理
+    handlePaste(evt) {
+        this.insert = this.insert.bind(this);
+        let clipboardData = evt.clipboardData || evt.originalEvent.clipboardData;
+        if (clipboardData && clipboardData.items) {
+            let items = clipboardData.items;
+            this.readFiles(items, this.insert);
+        }
+    }
+
+    // 从clipboardData中读取图片base64数据
+    readFiles(items, callback) {
+        [].forEach.call(items, item => {
+            if (item.kind === 'file'
+                && item.type.match(/^image\/(gif|jpe?g|a?png|svg|webp|bmp|vnd\.microsoft\.icon)/i)) {
+                let blob = item.getAsFile();
+                let reader = new FileReader();
+                reader.onload = function (evt) {
+                    callback && callback(evt.target.result);
+                }; // data url!
+                reader.readAsDataURL(blob);
+            }
+        });
+    }
+
+    // 将base64数据装饰成<img>标签插入quill中
+    insert(base64 = '') {
+        let selection = this.quill.getSelection(); // null may be returned if editor does not have focus
+        let index = (this.quill.getSelection() || {}).index || this.quill.getLength();
+        if (selection) {
+            // we must be in a browser that supports pasting (like Firefox)
+            // so it has already been placed into the editor
+        }
+        else {
+            // otherwise we wait until after the paste when this.quill.getSelection()
+            // will return a valid index
+            setTimeout(function () {
+                this.quill.insertEmbed(index, 'image', base64, 'user');
+            }.bind(this), 0);
+        }
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["default"] = ImagePaste;
+
+
+// if (window.Quill) {
+//     window.Quill.register('modules/imagePaste', ImagePaste);
+// }
+
+
+/***/ })
+/******/ ]);
