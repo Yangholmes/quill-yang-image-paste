@@ -3,22 +3,36 @@
  * @file
  * @author Yangholmes
  */
+'use strict';
 const webpack = require('webpack');
 const path = require('path');
-const MinifyPlugin = require("babel-minify-webpack-plugin");
-
-function resolve(dir) {
-    return path.join(__dirname, '..', dir);
-}
 
 const config = {
     entry: './src/imagePaste.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    module: {},
-    plugins: []
+    module: {
+        rules: [{
+            test: /\.js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }
+        }]
+    }
+    // plugins: [
+    //     new webpack.optimize.UglifyJsPlugin({
+    //         compress: {
+    //             warnings: false
+    //         },
+    //         sourceMap: true
+    //     })
+    // ]
 };
 
 module.exports = config;
