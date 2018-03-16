@@ -23,7 +23,7 @@ import 'quill-yang-image-paste';
 
 <script>
 import Quill from 'quill';
-import {quillEditor} from 'vue-quill-editor'; // use `vue-quill-editor` component
+import {quillEditor} from 'vue-quill-editor'; // use `vue-quill-editor` component refs[https://www.npmjs.com/package/vue-quill-editor]
 import ImagePaste from 'quill-yang-image-paste';
 
 import 'quill/dist/quill.core.css';
